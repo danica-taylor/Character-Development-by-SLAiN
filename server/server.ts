@@ -1,13 +1,27 @@
 import express from 'express'
 import * as Path from 'node:path'
 
-import fruitRoutes from './routes/fruits.ts'
+// import fruitRoutes from './routes/fruits.ts'
+
+// ----------------------------------------------
+// NOTE TEMPORARY NAMES
+// The expRoutes are exp.ts are just temporary placeholders until the 
+// db/server/migrations table are set up along with the seeds
+import expRoutes from './routes/exp.ts'
+// ----------------------------------------------
 
 const server = express()
-
 server.use(express.json())
 
-server.use('/api/v1/fruits', fruitRoutes)
+// OUR API ROUTES HERE
+// ----------------------------------------------
+// NOTE TEMPORARY NAMES
+// The expRoutes are exp are just temporary placeholders until we agree on a name 
+server.use('/api/v1/exp', expRoutes)
+// ----------------------------------------------
+
+
+// server.use('/api/v1/fruits', fruitRoutes)
 
 if (process.env.NODE_ENV === 'production') {
   server.use(express.static(Path.resolve('public')))
