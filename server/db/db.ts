@@ -1,19 +1,19 @@
 import connection from "./connection";
 
 // Still yet to be made in models "exp.ts"
-import { ExpEntry } from '../../models/exp,'
+import { Experience,ExperienceData } from '../../models/exp.ts'
 // ----------------------------------------------
 
 const db = connection;
 
 
-// Get all ExpEntries (GET)
-export function getExpEntries(): Promise<ExpEntry[]> {
-  return db<ExpEntry>('experience').select()
+// Get all experience entries
+export function getAllExperienceEntries(): Promise<Experience[]> {
+  return db<Experience>('experience').select()
 }
 
 // Add role (POST)
-export function addExpEntry(newExpEntry: ExpEntry){
+export function addExpEntry(newExpEntry: ExperienceData){
   return db('experience').insert(newExpEntry)
 }
 
