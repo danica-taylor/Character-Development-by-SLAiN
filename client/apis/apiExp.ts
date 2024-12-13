@@ -1,5 +1,5 @@
 import request from 'superagent'
-import { Experience } from '../../models/exp'
+import { Experience, ExperienceData } from '../../models/exp'
 // will update promise arrays when model made
 
 // access server-side api
@@ -28,7 +28,7 @@ export async function getExperienceById(id: number): Promise<Experience> {
 }
 
 // add new exp
-export async function addExperience(newExp: Experience): Promise<void> {
+export async function addExperience(newExp: ExperienceData): Promise<void> {
   try {
     await request.post(rootUrl).send(newExp)
   } catch (error) {
