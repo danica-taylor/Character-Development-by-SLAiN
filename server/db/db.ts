@@ -1,31 +1,38 @@
 import connection from "./connection";
 
-// Still yet to be made in models "exp.ts"
-import { Experience,ExperienceData } from '../../models/exp.ts'
-// ----------------------------------------------
+
+import { Experience } from '../../models/exp.ts'
+
 
 const db = connection;
 
 
 // Get all experience entries
 export function getAllExperienceEntries(): Promise<Experience[]> {
-  return db<Experience>('experience').select()
+  return db('experience').select()
 }
 
-// Add role (POST)
-export function addExpEntry(newExpEntry: ExperienceData){
+// Get experience entry by ID
+export function getExperienceEntryById(id: number): Promise<Experience> {
+  return db('experience').where({ id }).select().first()
+}
+
+// Add experience entry (POST)
+export function addExperienceEntry(newExpEntry: Experience){
   return db('experience').insert(newExpEntry)
 }
 
+// Delete experience entry (DEL)
+export function deleteExperienceEntry(id: number): Promise<Experience> {
+  return db('experience').where({ id }).del()
+}
 
 // ----------------------------------------------
 // Below are potential stretch CRUD functions that can be added in at a later time 
+// THe functions below have temporary placeholder names
 // ----------------------------------------------
 
-// // Delete role (DEL)
-// export function deleteExpEntry(id: number): Promise<ExpEntry> {
-//   return db('experience').where({id}).del()
-// }
+
 
 // // Get role by id (GET)
 // export function getExpEntryById(id: number): Promise<ExpEntry> {
