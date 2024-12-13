@@ -3,3 +3,8 @@ export interface Experience {
   name: string
   details: string
 }
+
+export interface ExperienceData {
+  name: string
+  details: string
+}
