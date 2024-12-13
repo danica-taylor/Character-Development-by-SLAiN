@@ -3,7 +3,7 @@ import { Experience, ExperienceData } from '../../models/exp'
 // will update promise arrays when model made
 
 // access server-side api
-const rootUrl = '/api/v1/ExpEntry'
+const rootUrl = '/api/v1/Experience'
 
 // get all exp
 export async function getExperiences(): Promise<Experience[]> {
