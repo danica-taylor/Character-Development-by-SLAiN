@@ -7,7 +7,7 @@ import * as Path from 'node:path'
 // NOTE TEMPORARY NAMES
 // The expRoutes are exp.ts are just temporary placeholders until the 
 // db/server/migrations table are set up along with the seeds
-import expRoutes from './routes/exp.ts'
+import experience from './routes/server-side routes.ts'
 // ----------------------------------------------
 
 const server = express()
@@ -17,7 +17,7 @@ server.use(express.json())
 // ----------------------------------------------
 // NOTE TEMPORARY NAMES
 // The expRoutes are exp are just temporary placeholders until we agree on a name 
-server.use('/api/v1/exp', expRoutes)
+server.use('/api/v1/experience', experience)
 // ----------------------------------------------
 
 
