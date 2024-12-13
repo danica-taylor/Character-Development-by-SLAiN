@@ -11,7 +11,7 @@ export async function getExperiences(): Promise<Experience[]> {
     const res = await request.get(rootUrl)
     return res.body as Experience[]
   } catch (error) {
-    console.error(`Error fetching experiences: ${error.message}`)
+    console.error(`Error fetching experiences`)
     throw error
   }
 }
@@ -22,7 +22,7 @@ export async function getExperienceById(id: number): Promise<Experience> {
     const res = await request.get(`${rootUrl}/${id}`)
     return res.body as Experience
   } catch (error) {
-    console.error(`Error fetching experience with ID ${id}: ${error.message}`)
+    console.error(`Error fetching experience with ID ${id}`)
     throw error
   }
 }
@@ -32,7 +32,7 @@ export async function addExperience(newExp: ExperienceData): Promise<void> {
   try {
     await request.post(rootUrl).send(newExp)
   } catch (error) {
-    console.error(`Error adding new experience: ${error.message}`)
+    console.error(`Error adding new experience`)
     throw error
   }
 }
