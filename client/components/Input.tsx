@@ -2,6 +2,7 @@ import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { useState } from 'react'
 import { addExperience } from '../apis/apiExp'
 import { ExperienceData } from '../../models/exp'
+import canvasConfetti from 'https://cdn.skypack.dev/canvas-confetti'
 
 function AddEXP() {
   const [newEXP, setNewEXP] = useState('')
@@ -20,6 +21,10 @@ function AddEXP() {
     event.preventDefault()
     addMutation.mutate({ name: newEXP, details: '' })
     setNewEXP('')
+
+    if (event) {
+      canvasConfetti()
+    }
   }
 
   return (
