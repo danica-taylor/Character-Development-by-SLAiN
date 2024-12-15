@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import { getExperiences } from '../apis/apiExp'
+import { Link } from 'react-router-dom'
 
 export default function ExperienceList() {
   const {
@@ -29,6 +30,7 @@ export default function ExperienceList() {
             </li>
           ))}
         </ul>
+        <Link to="/">Home</Link>
       </div>
     </section>
   )
