@@ -1,12 +1,12 @@
 import AddEXP from './Input'
-import ExperienceList from './ExperienceList'
+import { Link } from 'react-router-dom'
 
 function App() {
   return (
     <>
       <div className="app">
         <h1>Character Development</h1>
-        <ExperienceList />
+        <Link to="experience">EXP</Link>
         <AddEXP />
       </div>
     </>
