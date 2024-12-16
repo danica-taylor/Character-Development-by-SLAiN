@@ -26,7 +26,6 @@ export default function ExperienceList() {
             <li key={experience.id}>
               <div className="view">
                 <label>{experience.name}</label>
-                {/* <DeleteExperience experienceID={experience.id} />  */}
               </div>
             </li>
           ))}
