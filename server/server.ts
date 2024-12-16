@@ -1,11 +1,10 @@
 import express from 'express'
 import * as Path from 'node:path'
 
-import experience from './routes/server-side routes.ts'
+import experience from './routes/experiences.ts'
 
 const server = express()
 server.use(express.json())
-
 
 server.use('/api/v1/experience', experience)
 
