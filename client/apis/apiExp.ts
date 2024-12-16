@@ -36,14 +36,3 @@ export async function addExperience(newExp: ExperienceData): Promise<void> {
     throw error
   }
 }
-
-// delete exp by ID
-// discussed in brainstorm session not to have del function, TBC
-// export async function deleteExperience(id: number): Promise<void> {
-//   try {
-//     await request.delete(`${rootUrl}/${id}`)
-//   } catch (error) {
-//     console.error(`Error deleting experience with ID ${id}: ${error.message}`)
-//     throw error
-//   }
-// }
