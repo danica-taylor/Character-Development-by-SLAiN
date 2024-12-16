@@ -1,4 +1,4 @@
-import AddEXP from './Input'
+import Input from './Input'
 import { Link } from 'react-router-dom'
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
       <div className="app">
         <h1>Character Development</h1>
         <Link to="experience">EXP</Link>
-        <AddEXP />
+        <Input />
       </div>
     </>
   )
