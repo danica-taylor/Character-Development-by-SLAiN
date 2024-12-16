@@ -1,5 +1,7 @@
 import Input from './Input'
 import { Link } from 'react-router-dom'
+import '../styles/styles.css'
+import './App.css'
 
 function App() {
   return (
