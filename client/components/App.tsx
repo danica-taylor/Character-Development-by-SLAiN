@@ -2,7 +2,6 @@ import '../styles/styles.css'
 import Input from './Input'
 import { Link } from 'react-router-dom'
 import '../styles/styles.css'
-import './App.css'
 import ExpBar from './ExpBar'
 // import HpBar from './HpBar'
 
@@ -21,13 +20,11 @@ function App() {
         </div>
         {/* <HpBar /> */}
         <Input />
-        </div>
       </nav>
 
       <footer>
         <p>&copy; 2024 SLAiN. All Rights Reserved.</p>
       </footer>
-
     </>
   )
 }
