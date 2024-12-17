@@ -9,9 +9,9 @@ import ExpBar from './ExpBar'
 function App() {
   return (
     <>
-      <div className="app">
+      <nav>
         <img
-          src={'client/styles/images/Character-Development-16-12-2024.png'}
+          src={'public/images/Character-Development-16-12-2024.png'}
           alt="Character Development Logo"
           className="app-logo"
         />{' '}
@@ -21,7 +21,13 @@ function App() {
         </div>
         {/* <HpBar /> */}
         <Input />
-      </div>
+        </div>
+      </nav>
+
+      <footer>
+        <p>&copy; 2024 SLAiN. All Rights Reserved.</p>
+      </footer>
+
     </>
   )
 }

@@ -34,27 +34,27 @@ function AddEXP() {
   }
 
   return (
-    <section className="exp-section">
-      <div className="exp-text">
+    <section className="hero">
+      <div className="hero-text">
         <h1>Share Your Development!</h1>
-        <p></p>
+        <p>Celebrate your progress and achievements.</p>
       </div>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="exp" aria-label="exp" />
         <input
           placeholder="What did I achieve today?"
           type="text"
           id="exp"
           onChange={handleChange}
           value={newEXP}
+          required
         />
-        <label htmlFor="date" aria-label="date" />
         <input
           placeholder="dd/mm/yyyy"
           type="text"
           id="date"
           onChange={handleDateChange}
           value={newDate}
+          required
         />
         <button type="submit">Submit</button>
       </form>
