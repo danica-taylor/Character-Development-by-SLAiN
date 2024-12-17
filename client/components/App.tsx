@@ -9,9 +9,11 @@ function App() {
     <>
       <div className="app">
         <h1>Character Development</h1>
-        <Link to="experience">EXP</Link>
+        <div className="exp-bar">
+          <Link to="experience">EXP</Link>
+          <ExpBar />
+        </div>
         <Input />
-        <ExpBar />
       </div>
     </>
   )

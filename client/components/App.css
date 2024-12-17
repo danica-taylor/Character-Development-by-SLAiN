@@ -1,0 +1,5 @@
+.exp-bar {
+  display: flex; /* Horizontal alignment */
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+}

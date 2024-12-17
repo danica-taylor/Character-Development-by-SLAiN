@@ -8,7 +8,7 @@ export default function ExperienceList() {
     data: experiences = [],
     isLoading,
     isError,
-  } = useQuery({ queryKey: ['experiences'], queryFn: getExperiences })
+  } = useQuery({ queryKey: ['exp'], queryFn: getExperiences })
 
   if (isError) {
     return <h2>Error loading experiences.</h2>

@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
 import { useState } from 'react'
 import { getExperiences } from '../apis/apiExp'
-import './ExperienceList.css'
+import './ExpBar.css'
 import ExpSkill from './ExpSkill'
 
 export default function ExpBar() {
@@ -11,7 +11,7 @@ export default function ExpBar() {
     data: experiences = [],
     isLoading,
     isError,
-  } = useQuery({ queryKey: ['experiences'], queryFn: getExperiences })
+  } = useQuery({ queryKey: ['exp'], queryFn: getExperiences })
 
   if (isError) {
     return <h2>Error loading experiences.</h2>
@@ -26,21 +26,23 @@ export default function ExpBar() {
   }
 
   const maxSkills = 5
-  const skillsInBar = Math.min(experiences.length, maxSkills) // Shows how many skills are in the bar and makes sure it doesn't exceed 5
 
-  if (skillsInBar === maxSkills) {
+  const skillsInBar = experiences.slice(-maxSkills) // 5 most recent skills
+
+  if (skillsInBar.length === maxSkills) {
     setUserLevel(userLevel + 1) // User levels up when the max amount is reached
     // TODO: Add function to reset the skills count here or keep it stored
   }
 
   return (
     <>
-      <ul>
+      <ul className="skill-list">
         {/* Displays the 5 most recent skills */}
-        {experiences.slice(-maxSkills).map((skill) => {
-          return <ExpSkill key={skill.id} id={skill.id} skill={skill} />
+        {skillsInBar.map((skill) => {
+          return <ExpSkill key={skill.id} skill={skill} />
         })}
       </ul>
+      <p>Level: {userLevel}</p>
     </>
   )
 }
