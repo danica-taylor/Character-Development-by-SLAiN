@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { ExperienceData } from '../../models/exp'
 
 interface Props {
@@ -6,20 +5,16 @@ interface Props {
 }
 
 export default function ExpSkill({ skill }: Props) {
-  const [isSelected, setIsSelected] = useState(false) // Starts with no skill selected
-
   // Handle clicking on a skill
   const handleClick = () => {
-    setIsSelected(!isSelected) // Sets the selected skill and shows its details
+    const skillDesc = skill.details ? skill.details : 'None provided'
+    alert(`Experience: ${skill.name}\nDetails: ${skillDesc}`) // Displays the skill and its info when clicked
   }
 
   return (
     <>
       <li>
-        <button onClick={handleClick}>
-          {/* Display the skill */}
-          {isSelected ? skill.name : ''}
-        </button>
+        <button onClick={handleClick}>{''}</button>
       </li>
     </>
   )

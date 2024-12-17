@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import '../styles/styles.css'
 import './App.css'
 import ExpBar from './ExpBar'
+// import HpBar from './HpBar'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Link to="experience">EXP</Link>
           <ExpBar />
         </div>
+        {/* <HpBar /> */}
         <Input />
       </div>
     </>
