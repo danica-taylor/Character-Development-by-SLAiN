@@ -1,0 +1,8 @@
+.skill-list {
+  display: flex; /* Makes list items align horizontally */
+  list-style: none; /* Removes the bullet points */
+}
+
+.skill-list li {
+  padding: 10px;
+}

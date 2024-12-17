@@ -212,3 +212,11 @@ footer {
 .back-home-link:hover {
   color: #608062;
 }
+
+/* EXP bar styles */
+
+.exp-bar {
+  display: flex; /* Horizontal alignment */
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+}
