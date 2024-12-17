@@ -5,15 +5,22 @@ import { Link } from 'react-router-dom'
 function App() {
   return (
     <>
-      <div className="app">
+      <nav>
         <img
           src={'client/styles/images/Character-Development-16-12-2024.png'}
           alt="Character Development Logo"
           className="app-logo"
-        />{' '}
+        />
+        <Link to="experience">EXP</Link>
+      </nav>
+
+      <div>
         <Input />
       </div>
-      <Link to="experience">EXP</Link>
+
+      <footer>
+        <p>&copy; 2024 SLAiN. All Rights Reserved.</p>
+      </footer>
     </>
   )
 }
