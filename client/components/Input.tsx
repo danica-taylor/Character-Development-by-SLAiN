@@ -24,7 +24,7 @@ function AddEXP() {
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault()
-    addMutation.mutate({ name: newEXP, details: newDate })
+    addMutation.mutate({ name: newEXP, date: newDate })
     setNewEXP('')
     setNewDate('')
 
@@ -36,7 +36,7 @@ function AddEXP() {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="exp">Put experience below</label>
+        <label htmlFor="exp" aria-label="exp" />
         <input
           placeholder="What did I achieve today?"
           type="text"
@@ -44,9 +44,9 @@ function AddEXP() {
           onChange={handleChange}
           value={newEXP}
         />
-        <label htmlFor="date">Put date below</label>
+        <label htmlFor="date" aria-label="date" />
         <input
-          placeholder="What date did this experience occur?"
+          placeholder="dd/mm/yyyy"
           type="text"
           id="date"
           onChange={handleDateChange}

@@ -9,15 +9,15 @@ export async function seed(knex) {
     {
       id: 1,
       name: 'Join Dev Academy Aotearoa',
-      details: 'Full stack applications',
+      date: '22/06/2024',
     },
     { id: 2, 
       name: 'Applied for an internship', 
-      details: 'With OSF Digital' 
+      date: '04/12/2024' 
     },
     { id: 3, 
       name: 'Got into a relationship', 
-      details: '07/01/2023' 
+      date: '07/01/2023' 
     },
   ])
 }
