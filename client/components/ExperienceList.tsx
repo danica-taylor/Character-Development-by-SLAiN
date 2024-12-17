@@ -18,20 +18,23 @@ export default function ExperienceList() {
   }
 
   return (
-    <section>
-      <div>
-        <ul className="experience-list">
-          {experiences.map((experience) => (
-            <li key={experience.id}>
-              <div className="view">
+    <section className="experience-section">
+      <h2>My Experiences</h2>
+      <ul className="experience-list">
+        {experiences.map((experience) => (
+          <li key={experience.id} className="experience-item">
+            <article className="experience-card">
+              <div className="experience-header">
                 <label>{experience.name}</label>
-                {/* <DeleteExperience experienceID={experience.id} />  */}
               </div>
-            </li>
-          ))}
-        </ul>
-        <Link to="/">Home</Link>
-      </div>
+              <p className="experience-details">{experience.details || ''}</p>
+            </article>
+          </li>
+        ))}
+      </ul>
+      <Link to="/" className="back-home-link">
+        Back to Home
+      </Link>
     </section>
   )
 }

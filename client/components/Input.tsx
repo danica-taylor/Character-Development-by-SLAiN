@@ -34,7 +34,11 @@ function AddEXP() {
   }
 
   return (
-    <>
+    <section className="exp-section">
+      <div className="exp-text">
+        <h1>Share Your Development!</h1>
+        <p></p>
+      </div>
       <form onSubmit={handleSubmit}>
         <label htmlFor="exp" aria-label="exp" />
         <input
@@ -52,9 +56,9 @@ function AddEXP() {
           onChange={handleDateChange}
           value={newDate}
         />
-        <button>Submit</button>
+        <button type="submit">Submit</button>
       </form>
-    </>
+    </section>
   )
 }
 
