@@ -1,10 +1,10 @@
 export interface Experience {
   id: number
   name: string
-  details: string
+  date: string
 }
 
 export interface ExperienceData {
   name: string
-  details: string
+  date: string
 }

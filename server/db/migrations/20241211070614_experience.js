@@ -6,7 +6,7 @@ export function up(knex) {
   return knex.schema.createTable('experience', (table) => {
     table.increments()
     table.string('name')
-    table.string('details')
+    table.string('date')
   })
 }
 

@@ -1,3 +1,4 @@
+import '../styles/styles.css'
 import Input from './Input'
 import { Link } from 'react-router-dom'
 import '../styles/styles.css'
@@ -9,7 +10,11 @@ function App() {
   return (
     <>
       <div className="app">
-        <h1>Character Development</h1>
+        <img
+          src={'client/styles/images/Character-Development-16-12-2024.png'}
+          alt="Character Development Logo"
+          className="app-logo"
+        />{' '}
         <div className="exp-bar">
           <Link to="experience">EXP</Link>
           <ExpBar />
