@@ -2,6 +2,7 @@ import Input from './Input'
 import { Link } from 'react-router-dom'
 import '../styles/styles.css'
 import './App.css'
+import ExpBar from './ExpBar'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <h1>Character Development</h1>
         <Link to="experience">EXP</Link>
         <Input />
+        <ExpBar />
       </div>
     </>
   )
