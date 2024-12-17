@@ -6,6 +6,7 @@ import canvasConfetti from 'https://cdn.skypack.dev/canvas-confetti'
 
 function AddEXP() {
   const [newEXP, setNewEXP] = useState('')
+  const [newDate, setNewDate] = useState('')
   const queryClient = useQueryClient()
 
   const addMutation = useMutation({
@@ -17,10 +18,15 @@ function AddEXP() {
     setNewEXP(event.target.value)
   }
 
+  const handleDateChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setNewDate(event.target.value)
+  }
+
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault()
-    addMutation.mutate({ name: newEXP, details: '' })
+    addMutation.mutate({ name: newEXP, details: newDate })
     setNewEXP('')
+    setNewDate('')
 
     if (event) {
       canvasConfetti()
@@ -38,6 +44,15 @@ function AddEXP() {
           onChange={handleChange}
           value={newEXP}
         />
+        <label htmlFor="date">Put date below</label>
+        <input
+          placeholder="What date did this experience occur?"
+          type="text"
+          id="date"
+          onChange={handleDateChange}
+          value={newDate}
+        />
+        <button>Submit</button>
       </form>
     </>
   )
