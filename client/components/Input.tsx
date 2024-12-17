@@ -28,9 +28,12 @@ function AddEXP() {
   }
 
   return (
-    <>
+    <section className="exp-section">
+      <div className="exp-text">
+        <h1>Share Your Development!</h1>
+        <p></p>
+      </div>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="exp">Put experience below</label>
         <input
           placeholder="What did I achieve today?"
           type="text"
@@ -38,8 +41,9 @@ function AddEXP() {
           onChange={handleChange}
           value={newEXP}
         />
+        <button type="submit">Submit</button>
       </form>
-    </>
+    </section>
   )
 }
 
