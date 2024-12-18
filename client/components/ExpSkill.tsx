@@ -7,7 +7,7 @@ interface Props {
 export default function ExpSkill({ skill }: Props) {
   // Handle clicking on a skill
   const handleClick = () => {
-    const skillDesc = skill.details ? skill.details : 'None provided'
+    const skillDesc = skill.date ? skill.date : 'None provided'
     alert(`Experience: ${skill.name}\nDetails: ${skillDesc}`) // Displays the skill and its info when clicked
   }
 

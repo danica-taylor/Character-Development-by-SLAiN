@@ -40,7 +40,7 @@ export default function ExperienceList() {
                   <label>{experience.name}</label>
                 </div>
                 <p className="experience-details">
-                  {experience.details || 'No details provided'}
+                  {experience.date || 'No date provided'}
                 </p>
               </article>
             </li>
