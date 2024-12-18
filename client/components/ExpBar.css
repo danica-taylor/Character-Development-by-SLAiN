@@ -6,3 +6,9 @@
 .skill-list li {
   padding: 10px;
 }
+.exp-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Space between logo and EXP bar */
+}

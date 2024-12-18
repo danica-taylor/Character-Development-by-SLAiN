@@ -10,7 +10,7 @@ function App() {
     <>
       <nav>
         <img
-          src={'public/images/Character-Development-16-12-2024.png'}
+          src={'/images/Character-Development-16-12-2024.png'}
           alt="Character Development Logo"
           className="app-logo"
         />{' '}
